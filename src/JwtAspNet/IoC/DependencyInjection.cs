@@ -31,8 +31,11 @@ namespace JwtAspNet.IoC
           ValidateAudience = false
         };
       });
-      
-      services.AddAuthorization();
+
+      services.AddAuthorization(x => 
+      { 
+        x.AddPolicy("Admin", p => p.RequireRole("admin")); 
+      });
     }
 
     public static void AddServices(this IServiceCollection services)
