@@ -11,6 +11,10 @@ var app = builder.Build();
 app.UseAuthentication();
 app.UseAuthorization();
 
-app.MapGet("/", (TokenService tokenService, [FromBody] User user) => tokenService.Create(user));
+app.MapGet("/login", (TokenService tokenService, [FromBody] User user) => tokenService.Create(user));
+
+app.MapGet("/restrito", () => "Você tem acesso!").RequireAuthorization();
+
+app.MapGet("/admin", () => "Você tem acesso!").RequireAuthorization("admin");
 
 app.Run();
