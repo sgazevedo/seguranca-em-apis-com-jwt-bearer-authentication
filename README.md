@@ -7,4 +7,13 @@ Neste curso vamos entender como funciona o processo de autenticação e autoriza
 
 Vamos passar por todos os pilares do oAuth e Bearer Authentication, implementando uma solução de ponta-a-ponta.
 
-
+## TODO
+Uses cases a serem implementados:
+- Change Email
+- Change Name
+- Change Password
+- Details
+- ResendVerificationCode
+- ResetPassword
+- SendResetPassword
+- Verify
